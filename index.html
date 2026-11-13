@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Browser</title>
+  <style>
+    body {
+      background: #111827;
+      color: white;
+      font-family: Arial;
+      text-align: center;
+      padding-top: 100px;
+    }
+    h1 {
+      font-size: 45px;
+    }
+    input {
+      padding: 15px;
+      width: 300px;
+      border-radius: 20px;
+      border: none;
+    }
+    button {
+      padding: 15px;
+      border-radius: 20px;
+      border: none;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+  <h1>My Browser</h1>
+  <p>Welcome to my personal homepage!</p>
+  <input id="search" placeholder="Search the web...">
+  <button onclick="searchWeb()">Search</button>
+
+  <script>
+    function searchWeb() {
+      const query = document.getElementById("search").value;
+      if (query.trim()) {
+        window.open(
+          "https://www.google.com/search?q=" +
+          encodeURIComponent(query),
+          "_blank"
+        );
+      }
+    }
+  </script>
+</body>
+</html>
